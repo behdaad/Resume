@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	by: Ehsan Emamjomeh-Zadeh
+%%	http://www-scf.usc.edu/~emamjome/
+%%
+%%	Contact information:
+%%		emamjome[at]usc[dot]edu
+%%		ehsan7069[at]gmail[dot]com
+%%
+%%	current version: 3.2
+%%	last update: Nov. 30, 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\ProvidesPackage{ehsan7069}
+
+%% packages:
+\usepackage{amsopn}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[mathscr]{euscript}
+\usepackage{url} \urlstyle{rm}
+\usepackage{enumitem}
+\usepackage{ifthen}
+\usepackage{color}
+\usepackage{xspace}
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+\usepackage{graphicx}
+
+\newcommand{\Eat}[1]{} %% just comment!
+
+%% font commands:
+\newcommand{\BF}[1]{\textbf{#1}}
+\newcommand{\IT}[1]{\textit{#1}}
+\newcommand{\UL}[1]{\underline{#1}}
+
+%% math:
+
+\newcommand{\ABS}[1]{\ensuremath{| #1 |}}
+\newcommand{\Set}[1]{\ensuremath{\{ #1 \}}}
+\newcommand{\SetCard}[1]{\ensuremath{| #1 |}}
+\newcommand{\SpecSet}[2]{\ensuremath{\Set{#1 \mid #2}}}
+\newcommand{\Ordinal}[1]{\ensuremath{{#1}^{\rm th}}}
+\newcommand{\Ceil}[1]{\ensuremath{\left\lceil{#1}\right\rceil}}
+\newcommand{\Floor}[1]{\ensuremath{\left\lfloor{#1}\right\rfloor}}
+\newcommand{\Angle}[1]{\ensuremath{\left\langle{#1}\right\rangle}}
+\def\Assign{\ensuremath{\leftarrow}\xspace}
+
+\def\AAA{\ensuremath{\mathcal{A}}\xspace}
+\def\BBB{\ensuremath{\mathcal{B}}\xspace}
+\def\CCC{\ensuremath{\mathcal{C}}\xspace}
+\def\DDD{\ensuremath{\mathcal{D}}\xspace}
+\def\EEE{\ensuremath{\mathcal{E}}\xspace}
+\def\FFF{\ensuremath{\mathcal{F}}\xspace}
+\def\GGG{\ensuremath{\mathcal{G}}\xspace}
+\def\HHH{\ensuremath{\mathcal{H}}\xspace}
+\def\III{\ensuremath{\mathcal{I}}\xspace}
+\def\JJJ{\ensuremath{\mathcal{J}}\xspace}
+\def\KKK{\ensuremath{\mathcal{K}}\xspace}
+\def\LLL{\ensuremath{\mathcal{L}}\xspace}
+\def\MMM{\ensuremath{\mathcal{M}}\xspace}
+\def\NNN{\ensuremath{\mathcal{N}}\xspace}
+\def\OOO{\ensuremath{\mathcal{O}}\xspace}
+\def\PPP{\ensuremath{\mathcal{P}}\xspace}
+\def\QQQ{\ensuremath{\mathcal{Q}}\xspace}
+\def\RRR{\ensuremath{\mathcal{R}}\xspace}
+\def\SSS{\ensuremath{\mathcal{S}}\xspace}
+\def\TTT{\ensuremath{\mathcal{T}}\xspace}
+\def\UUU{\ensuremath{\mathcal{U}}\xspace}
+\def\VVV{\ensuremath{\mathcal{V}}\xspace}
+\def\WWW{\ensuremath{\mathcal{W}}\xspace}
+\def\XXX{\ensuremath{\mathcal{X}}\xspace}
+\def\YYY{\ensuremath{\mathcal{Y}}\xspace}
+\def\ZZZ{\ensuremath{\mathcal{Z}}\xspace}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\N}{\mathord}{AMSb}{"4E}
+\DeclareMathSymbol{\Z}{\mathord}{AMSb}{"5A}
+\DeclareMathSymbol{\R}{\mathord}{AMSb}{"52}
+
+\makeatletter
+\newcommand*{\RomanNum}[1]%
+{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+%% algorithm:
+\newcommand{\MyAlgorithm}[3]%
+{\begin{algorithm}[ht]
+\caption{\sc #1} \label{#2}
+\begin{algorithmic}[1]
+\vspace{0.1cm}
+\baselineskip=1.1\baselineskip
+#3
+\end{algorithmic}
+\end{algorithm}}
+
+%% colors:
+\definecolor{USCcardinal}{rgb}{0.598,0.000,0.000}
+\definecolor{USCgold}{rgb}{0.996,0.797,0.000}
+

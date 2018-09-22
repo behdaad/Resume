@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	by: Ehsan Emamjomeh-Zadeh
+%%	http://www-scf.usc.edu/~emamjome/
+%%
+%%	Contact information:
+%%		emamjome[at]usc[dot]edu
+%%		ehsan7069[at]gmail[dot]com
+%%
+%%	current version: 3.2
+%%	last update: Nov. 30, 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% personal information:
+
+\myDef{FullName}{Ehsan Emamjomeh-Zadeh}
+\myDef{Date}{\today} % usually \today (unless you wanna manually change it)
+\myDef{Note}{University of Southern California} % to appear in the header
+
+%% The followings are optional.
+%% You can have as many of them as you like.
+\myDef{UniversityName}{University of Southern California} % optional
+\myDef{UniversityNameShort}{USC} % optional
+\myDef{FirstResearchInterest}{Theoretical Computer Science} % optional
+\myDef{FirstProf}{Professor X}	% optional
+\myDef{SecondProf}{Professor Y}	% optional
+\myDef{ThirdProf}{Professor Z}	% optional
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% booleans to modify the header and your signiture:
+
+\setboolean{inHeaderShowNote}{true}
+\setboolean{inHeaderShowFullName}{true}
+\setboolean{inHeaderShowDate}{false}
+\setboolean{inSignitureShowFullName}{true}
+\setboolean{inSignitureShowDate}{true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% spacing:
+
+\setlength{\PushHeaderUp}{6ex} % possibly negative
+%% Each of the following lengths is effective
+%% only if the corresponding boolean is true.
+\setlength{\SpaceBeforeNote}{2ex}
+\setlength{\SpaceBeforeFullName}{4ex}
+\setlength{\SpaceBeforeDate}{2ex}
+\setlength{\SpaceAfterHeader}{2ex}
+
+\setlength{\SpaceBeforeSigniture}{2ex}
+\def\SignitureWidth{0.40} % in range (0, 1)
+
+%% where to insert the signiture? left or right?
+\def\SigniturePosition{left} % either left or right
+
+%% You can leave each of the followings emply
+%% if you're happy with its default value.
+\def\IndentParagraph{2.0} % indent the first line of each paragraph
+\def\SpaceBetweenParagraphs{1.2} % space between consecutive paragraphs
+\renewcommand{\baselinestretch}{1.1} % space between lines within a paragraph
+

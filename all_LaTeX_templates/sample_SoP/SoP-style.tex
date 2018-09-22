@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	by: Ehsan Emamjomeh-Zadeh
+%%	http://www-scf.usc.edu/~emamjome/
+%%
+%%	Contact information:
+%%		emamjome[at]usc[dot]edu
+%%		ehsan7069[at]gmail[dot]com
+%%
+%%	current version: 3.2
+%%	last update: Nov. 30, 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[11pt]{article}
+
+\usepackage{fullpage}
+\usepackage{nopageno} % removing page numbers
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{ifthen}
+  
+\newcommand{\myDef}[2]{%
+\expandafter\def\csname #1\endcsname{#2\xspace}}
+
+\newboolean{inHeaderShowNote}
+\newboolean{inHeaderShowFullName}
+\newboolean{inHeaderShowDate}
+\newboolean{inSignitureShowFullName}
+\newboolean{inSignitureShowDate}
+
+\newlength{\PushHeaderUp}
+\newlength{\SpaceBeforeNote}
+\newlength{\SpaceBeforeFullName}
+\newlength{\SpaceBeforeDate}
+\newlength{\SpaceAfterHeader}
+\newlength{\SpaceBeforeSigniture}
+
+
+\def\mySigniture{%
+\vspace*{\SpaceBeforeSigniture}%
+\ifthenelse{\equal{\SigniturePosition}{left}}%
+{\flushleft}{\flushright}{%
+\begin{minipage}{\SignitureWidth\textwidth}
+\ifthenelse{\boolean{inSignitureShowFullName}}%
+{\par{\FullName}}{}%
+\ifthenelse{\boolean{inSignitureShowDate}}%
+{\par{\Date}}{}
+\end{minipage}}}
+

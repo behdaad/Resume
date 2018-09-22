@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	by: Ehsan Emamjomeh-Zadeh
+%%	http://www-scf.usc.edu/~emamjome/
+%%
+%%	Contact information:
+%%		emamjome[at]usc[dot]edu
+%%		ehsan7069[at]gmail[dot]com
+%%
+%%	current version: 3.2
+%%	last update: Nov. 30, 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	Feel free to leave some info empty.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% full name, to be shown on top:
+\def\FullName{Ehsan Emamjomeh-Zadeh}
+
+%% contact info, for the left side:
+\def\DepartmentName{Department of Computer Science}
+\def\UniversityName{University of Southern California}
+\def\UniversityAddress{Los Angeles, CA 90089, United States}
+\def\OfficePhoneNumber{}
+
+%% contact info, for the right side:
+\def\MainEmailAddress{emamjome@usc.edu}
+\def\SecondEmailAddress{ehsan7069@gmail.com}
+\def\CellPhone{}
+\def\Homepage{http://www-scf.usc.edu/~emamjome/}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	You wouldn't probably need
+%%	to touch the rest of file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{\FullName}
+
+\contactInfo{%
+\ifthenelse{\equal{\DepartmentName}{}}{}%
+{\DepartmentName\\}
+\ifthenelse{\equal{\UniversityName}{}}{}%
+{\UniversityName\\}
+\ifthenelse{\equal{\UniversityAddress}{}}{}%
+{\UniversityAddress\\}
+\ifthenelse{\equal{\OfficePhoneNumber}{}}{}%
+{\OfficePhoneNumber\\}
+}%
+{%
+\ifthenelse{\equal{\MainEmailAddress}{}}{}%
+{\href{mailto:\MainEmailAddress}{\textrm{\MainEmailAddress}}\\}
+\ifthenelse{\equal{\SecondEmailAddress}{}}{}%
+{\href{mailto:\SecondEmailAddress}{\textrm{\SecondEmailAddress}}\\}
+\ifthenelse{\equal{\CellPhone}{}}{}%
+{Cell Phone: \CellPhone\\}
+\ifthenelse{\equal{\Homepage}{}}{}%
+{\href{\Homepage}{\url{\Homepage}}\\}
+Last Update: \today\\
+}
+

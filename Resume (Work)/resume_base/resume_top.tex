@@ -1,0 +1,32 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% By: Ehsan Emamjomeh-Zadeh
+%% http://www-scf.usc.edu/~emamjome/
+%%
+%% Email Addresses:
+%% emamjome[at]usc[dot]edu
+%% ehsan7069[at]gmail[dot]com
+%%
+%% Last Update: Nov. 11, 2014
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\address{%
+\ifthenelse{\equal{\CurrentDepartmentName}{}}{}%
+{\CurrentDepartmentName\\}
+\ifthenelse{\equal{\CurrentUniversityName}{}}{}%
+{\CurrentUniversityName\\}
+\ifthenelse{\equal{\CurrentUniversityAddress}{}}{}%
+{\CurrentUniversityAddress\\}
+}%
+{%
+\ifthenelse{\equal{\FirstEmail}{}}{}%
+{\href{mailto:\FirstEmail}{\textrm{\FirstEmail}}\\}
+\ifthenelse{\equal{\SecondEmail}{}}{}%
+{\href{mailto:\SecondEmail}{\textrm{\SecondEmail}}\\}
+\ifthenelse{\equal{\CellPhone}{}}{}%
+{Cell Phone: \CellPhone\\}
+\ifthenelse{\equal{\Homepage}{}}{}%
+{\href{\Homepage}{\url{\Homepage}}\\}
+\LastUpdate\\
+}
+

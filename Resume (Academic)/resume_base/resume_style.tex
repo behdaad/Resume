@@ -1,0 +1,65 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% By: Ehsan Emamjomeh-Zadeh
+%% http://www-scf.usc.edu/~emamjome/
+%%
+%% Email Addresses:
+%% emamjome[at]usc[dot]edu
+%% ehsan7069[at]gmail[dot]com
+%%
+%% Last Update: Nov. 11, 2014
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% No need to the main `base' folder.
+
+%\usepackage{url}
+\usepackage{xspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage[orig, american, cleanlook]{isodate}
+\usepackage{datetime}
+
+\urlstyle{rm}
+
+%%Commands
+
+\newcommand{\Eat}[1]{}
+
+\newcommand{\I}[1]{\textit{#1}}
+\newcommand{\B}[1]{\textbf{#1}}
+\newcommand{\U}[1]{\underline{#1}}
+\newcommand{\IB}[1]{\textit{\textbf{#1}}}
+
+\renewcommand{\categoryfont}{\sc}
+\renewcommand{\labelcitem}{$\diamond$}
+\renewcommand{\labelitemi}{$\cdot$}
+
+\newcommand{\MyItemBullet}[1]{\citembullet #1}
+\newcommand{\MyItemNoBullet}[1]{\citemnobullet #1}
+\newcommand{\MyItemEmph}[1]{\citem{#1}}
+
+\newcommand{\MyItem}[1]{\MyItemBullet{#1}}
+
+\newenvironment{MySection}[1]
+{\begin{category}{#1}}
+{\end{category}}
+
+%% Special Commands
+
+\newcommand{\OnlyFor}[2]{}
+
+%% Spacing
+
+\setlength{\oddsidemargin}{2.00cm}
+\setlength{\marginparwidth}{3.00cm}\addtolength{\marginparwidth}{-\marginparsep}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-7.00cm}
+\addtolength{\textwidth}{-1.25\oddsidemargin}
+\addtolength{\textwidth}{\marginparwidth}
+\addtolength{\textwidth}{\marginparsep}
+\setlength{\topmargin}{-1.00cm}
+\addtolength{\textheight}{-4.00cm}
+\newcommand{\InternalSpace}{\vspace{0.2cm}}
+\newcommand{\ExternalSpace}{\vspace{-0.1cm}}
+\newcommand{\NegativeSpace}{\vspace{-0.1cm}}
+

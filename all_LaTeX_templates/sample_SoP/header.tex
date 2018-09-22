@@ -1,0 +1,43 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	by: Ehsan Emamjomeh-Zadeh
+%%	http://www-scf.usc.edu/~emamjome/
+%%
+%%	Contact information:
+%%		emamjome[at]usc[dot]edu
+%%		ehsan7069[at]gmail[dot]com
+%%
+%%	current version: 3.2
+%%	last update: Nov. 30, 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\makeatletter
+\def\@maketitle{%
+	\begin{center}
+		\vspace*{-\PushHeaderUp}
+		\par %% title
+		\begin{Large}
+			Statement of Purpose
+		\end{Large}
+		\par
+		%% Note
+		\ifthenelse{\boolean{inHeaderShowNote}}%
+		{\vspace*{\SpaceBeforeNote}\Note\par}{}
+		%% FullName
+		\ifthenelse{\boolean{inHeaderShowFullName}}%
+		{\vspace*{\SpaceBeforeFullName}%
+		\begin{LARGE}\textit{\FullName}\end{LARGE}\par}{}
+		%% Date
+		\ifthenelse{\boolean{inHeaderShowDate}}%
+		{\vspace*{\SpaceBeforeDate}\Date\par}{}
+		\vspace*{\SpaceAfterHeader}
+	\end{center}}
+\maketitle
+
+%% spacings in file:
+
+\ifthenelse{\equal{\IndentParagraph}{}}{}%
+{\setlength{\parindent}{\IndentParagraph em}}
+\ifthenelse{\equal{\SpaceBetweenParagraphs}{}}{}%
+{\setlength{\parskip}{\SpaceBetweenParagraphs ex}}
+

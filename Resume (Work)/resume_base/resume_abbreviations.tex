@@ -1,0 +1,43 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% By: Ehsan Emamjomeh-Zadeh
+%% http://www-scf.usc.edu/~emamjome/
+%%
+%% Email Addresses:
+%% emamjome[at]usc[dot]edu
+%% ehsan7069[at]gmail[dot]com
+%%
+%% Last Update: Nov. 11, 2014
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% Date:
+
+\def \January {Jan.\xspace}
+\def \February {Feb.\xspace}
+\def \March {Mar.\xspace}
+\def \April {Apr.\xspace}
+\def \May {May\xspace}
+\def \June {June\xspace}
+\def \July {July\xspace}
+\def \August {Aug.\xspace}
+\def \September {Sept.\xspace}
+\def \October {Oct.\xspace}
+\def \November {Nov.\xspace}
+\def \December {Dec.\xspace}
+
+\makeatletter
+\def\month@english{\ifcase\month\or
+	\January\or
+	\February\or
+	\March\or
+	\April\or
+	\May\or
+	\June\or
+	\July\or
+	\August\or
+	\September\or
+	\October\or
+	\November\or
+	\December\or
+\fi}\makeatother
+

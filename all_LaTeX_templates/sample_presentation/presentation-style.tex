@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	by: Ehsan Emamjomeh-Zadeh
+%%	http://www-scf.usc.edu/~emamjome/
+%%
+%%	Contact information:
+%%		emamjome[at]usc[dot]edu
+%%		ehsan7069[at]gmail[dot]com
+%%
+%%	current version: 3.2
+%%	last update: Nov. 30, 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% info:
+
+%% TITLE (required)
+\def\TITLE{Deterministic and Probabilistic Binary Search in Graphs}
+
+%% SUBTITLE (not required)
+\def\SUBTITLE{}
+
+%% AUTHOR (required)
+\def\AUTHOR{Ehsan Emamjomeh-Zadeh}
+
+%% COAUTHOR (not required)
+\def\COAUTHOR{with David Kempe and Vikrant Singhal}
+
+%% INSTITUTION (not required)
+\def\INSTITUTION{University of Southern California (USC)}
+
+%% NOTE (not required)
+\def\NOTE{Southern California Theory Day}
+
+%% DATE (not required) -- usually \today
+\def\DATE{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% colors:
+
+%% title
+\def\colorTitleForeground{white}
+\def\colorTitleBackground{USCcardinal}
+
+%% author
+\def\colorAuthorForeground{white}
+\def\colorAuthorBackground{black}
+
+%% frame title
+\def\colorFrameTitleForeground{white}
+\def\colorFrameTitleBackground{\colorTitleBackground}
+
+%% block title
+\def\colorBlockTitleForeground{white}
+\def\colorBlockTitleBackground{USCcardinal}
+
+%% block body
+\def\colorBlockBodyForeground{black}
+\def\colorBlockBodyBackground{white}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% You wouldn't need to touch the rest.
+
+\documentclass{beamer}
+\usepackage{beamerthemeshadow}
+
+\usepackage{ifthen}
+
+%% USC colors:
+\makeatletter
+\@ifundefinedcolor{USCcardinal}%
+{\definecolor{USCcardinal}{rgb}{0.598,0.000,0.000}}{}
+\@ifundefinedcolor{USCgold}%
+{\definecolor{USCgold}{rgb}{0.996,0.797,0.000}}{}
+\makeatother
+
+\title{\TITLE}
+\author{\AUTHOR}
+
+\usefonttheme{serif}
+
+\setbeamercolor{title}%
+{fg=\colorTitleForeground, bg=\colorTitleBackground}
+\setbeamercolor{author}%
+{fg=\colorAuthorForeground, bg=\colorAuthorBackground}
+\setbeamercolor{frametitle}%
+{fg=\colorFrameTitleForeground, bg=\colorFrameTitleBackground}
+\setbeamercolor{palette primary}%
+{fg=\colorFrameTitleForeground, bg=\colorFrameTitleBackground}
+\setbeamercolor{block title}%
+{fg=\colorBlockTitleForeground, bg=\colorBlockTitleBackground}
+\setbeamercolor{block body}%
+{fg=\colorBlockBodyForeground, bg=\colorBlockBodyBackground}
+
+\defbeamertemplate*{title page}{customized}[1][]
+{\begin{center}
+	\begin{beamercolorbox}[shadow=true,rounded=true]{title}
+	\begin{center}
+		\begin{LARGE}\textsc{\TITLE}\end{LARGE}\par
+		\ifthenelse{\equal{\SUBTITLE}{}}{}%
+		{\smallskip\begin{Large}\textsc{\SUBTITLE}\end{Large}\par}
+	\end{center}
+	\end{beamercolorbox}
+	\smallskip
+	\begin{beamercolorbox}[shadow=true,rounded=true]{author}
+	\begin{center}
+		\begin{Large}\AUTHOR\end{Large}\par
+		\ifthenelse{\equal{\COAUTHOR}{}}{}%
+		{\smallskip\begin{large}\COAUTHOR\end{large}\par}
+	\end{center}
+	\end{beamercolorbox}
+	\ifthenelse{\equal{\INSTITUTION}{}}{}{\smallskip
+	\begin{center}{\textit{\INSTITUTION}}\par\end{center}}
+	\ifthenelse{\equal{\NOTE}{}}{}{\bigskip
+	\begin{center}\NOTE\par\end{center}}
+	\ifthenelse{\equal{\DATE}{}}{}{\smallskip
+	\begin{center}\DATE\par\end{center}}	
+\end{center}}
+
+
+\makeatother
+
+\setbeamertemplate{footline}
+{\leavevmode\hbox{%
+	\begin{beamercolorbox}[wd=.333\paperwidth,ht=3ex,dp=2ex,center]%
+	{author in head/foot}%
+	\usebeamerfont{author in head/foot}\insertshortauthor
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=.667\paperwidth,ht=3ex,dp=2ex,center]%
+	{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+	\end{beamercolorbox}
+}}
+
+\makeatletter
+
